@@ -5,6 +5,8 @@
 //  Created by Kirito04800 on 07/01/2022.
 //
 
+import Foundation
+
 protocol Modifiable {}
 
 extension Modifiable where Self: Any {

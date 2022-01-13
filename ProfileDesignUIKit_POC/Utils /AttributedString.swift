@@ -5,6 +5,10 @@
 //  Created by Kirito04800 on 07/01/2022.
 //
 
+import Foundation
+import UIKit
+// https://alisoftware.github.io/swift/2018/12/16/swift5-stringinterpolation-part2/
+
 struct AttributedString {
     let attributedString: NSAttributedString
 }
