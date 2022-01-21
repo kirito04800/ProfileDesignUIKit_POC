@@ -11,7 +11,13 @@ class CardView: UIView {
 
     @UsesAutoLayout
     var header = CardHeader(title: "test", icon: UIImage(systemName: "info.circle")!)
-    var details: UIView?
+
+    @UsesAutoLayout
+    var detailsViewContainer = UIView().applyModifiers {
+        $0.directionalLayoutMargins = NSDirectionalEdgeInsets(top: 16, leading: 16, bottom: 16, trailing: 16)
+    }
+
+    var detailsView: UIView?
     var isShowDetails: Bool = false
     var viewHeightConstraint: NSLayoutConstraint?
     weak var layoutDelegate: CardLayoutDelegate?
@@ -22,15 +28,20 @@ class CardView: UIView {
         layer.cornerRadius = 10
         clipsToBounds = true
         self.layoutDelegate = layoutDelegate
-        self.details = details
-        self.details?.translatesAutoresizingMaskIntoConstraints = false
+
+        detailsView = details
+        detailsView?.translatesAutoresizingMaskIntoConstraints = false
+
         viewHeightConstraint = heightAnchor.constraint(equalToConstant: 40)
 
+        guard let detailsView = detailsView else { return }
         addSubview(header)
-        addSubview(details)
+        addSubview(detailsViewContainer)
+        detailsViewContainer.addSubview(detailsView)
 
         setupHeader()
-        setupDetails()
+        setupDetailsViewContainer()
+        setupDetailsView()
         setupView()
     }
 
@@ -64,30 +75,40 @@ class CardView: UIView {
                 self.header.showDetailsButton.transform = CGAffineTransform.identity
             }
         }
-        self.layoutIfNeeded()
         if isShowDetails {
             viewHeightConstraint.isActive = false
             self.setNeedsLayout()
-            UIView.animate(withDuration: 0.5) {
+            UIView.animate(withDuration: 0.2) {
                 self.layoutDelegate?.layout()
             }
         }
         else {
             self.setNeedsLayout()
             viewHeightConstraint.isActive = true
-            UIView.animate(withDuration: 0.5) {
+            UIView.animate(withDuration: 0.2) {
                 self.layoutDelegate?.layout()
             }
         }
     }
 
-    private func setupDetails() {
-        guard let details = self.details else { return }
+    private func setupDetailsView() {
+        guard let detailsView = detailsView else { return }
         let constraints = [
-            details.topAnchor.constraint(equalTo: header.bottomAnchor),
-            details.centerXAnchor.constraint(equalTo: centerXAnchor),
-            details.widthAnchor.constraint(equalTo: widthAnchor),
-            details.bottomAnchor.constraint(equalTo: bottomAnchor),
+            detailsView.topAnchor.constraint(equalTo: detailsViewContainer.layoutMarginsGuide.topAnchor),
+            detailsView.rightAnchor.constraint(equalTo: detailsViewContainer.layoutMarginsGuide.rightAnchor),
+            detailsView.leftAnchor.constraint(equalTo: detailsViewContainer.layoutMarginsGuide.leftAnchor),
+            detailsView.bottomAnchor.constraint(equalTo: detailsViewContainer.layoutMarginsGuide.bottomAnchor),
+        ]
+        constraints[3].priority = .defaultLow
+        NSLayoutConstraint.activate(constraints)
+    }
+
+    private func setupDetailsViewContainer() {
+        let constraints = [
+            detailsViewContainer.topAnchor.constraint(equalTo: header.bottomAnchor),
+            detailsViewContainer.rightAnchor.constraint(equalTo: rightAnchor),
+            detailsViewContainer.leftAnchor.constraint(equalTo: leftAnchor),
+            detailsViewContainer.bottomAnchor.constraint(equalTo: bottomAnchor),
         ]
         NSLayoutConstraint.activate(constraints)
     }
