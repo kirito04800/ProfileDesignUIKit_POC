@@ -9,8 +9,6 @@ import UIKit
 
 class MainViewController: UIViewController, UIScrollViewDelegate {
     let layer = MainView()
-//    let layer = MainViewWithStack()
-
 
     override func viewDidLoad() {
         super.viewDidLoad()

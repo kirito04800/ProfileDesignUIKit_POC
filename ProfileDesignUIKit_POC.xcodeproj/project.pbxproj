@@ -17,7 +17,6 @@
 		1E63B0CC27884C4D004B8416 /* ProfileDesignUIKit_POCTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E63B0CB27884C4D004B8416 /* ProfileDesignUIKit_POCTests.swift */; };
 		1E63B0D627884C4D004B8416 /* ProfileDesignUIKit_POCUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E63B0D527884C4D004B8416 /* ProfileDesignUIKit_POCUITests.swift */; };
 		1E63B0D827884C4D004B8416 /* ProfileDesignUIKit_POCUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E63B0D727884C4D004B8416 /* ProfileDesignUIKit_POCUITestsLaunchTests.swift */; };
-		1E63B0E5278852DF004B8416 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E63B0E4278852DF004B8416 /* MainView.swift */; };
 		1E63B0EA27887EC8004B8416 /* Modifiable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E63B0E927887EC8004B8416 /* Modifiable.swift */; };
 		1E63B0EC278889CB004B8416 /* AttributedString.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E63B0EB278889CB004B8416 /* AttributedString.swift */; };
 		1E63B0EF27889169004B8416 /* UIView+Constraints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E63B0EE27889169004B8416 /* UIView+Constraints.swift */; };
@@ -26,7 +25,7 @@
 		1E63B0F627907535004B8416 /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E63B0F527907535004B8416 /* CardView.swift */; };
 		1E63B0F827907543004B8416 /* CardHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E63B0F727907543004B8416 /* CardHeader.swift */; };
 		1E63B0FA2790755F004B8416 /* CardDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E63B0F92790755F004B8416 /* CardDetails.swift */; };
-		1E961C8F2798206E00B5747A /* MainViewWithStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E961C8E2798206E00B5747A /* MainViewWithStack.swift */; };
+		1E961C8F2798206E00B5747A /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E961C8E2798206E00B5747A /* MainView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,7 +60,6 @@
 		1E63B0D127884C4D004B8416 /* ProfileDesignUIKit_POCUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ProfileDesignUIKit_POCUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		1E63B0D527884C4D004B8416 /* ProfileDesignUIKit_POCUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileDesignUIKit_POCUITests.swift; sourceTree = "<group>"; };
 		1E63B0D727884C4D004B8416 /* ProfileDesignUIKit_POCUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileDesignUIKit_POCUITestsLaunchTests.swift; sourceTree = "<group>"; };
-		1E63B0E4278852DF004B8416 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		1E63B0E927887EC8004B8416 /* Modifiable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Modifiable.swift; sourceTree = "<group>"; };
 		1E63B0EB278889CB004B8416 /* AttributedString.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AttributedString.swift; sourceTree = "<group>"; };
 		1E63B0EE27889169004B8416 /* UIView+Constraints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Constraints.swift"; sourceTree = "<group>"; };
@@ -70,7 +68,7 @@
 		1E63B0F527907535004B8416 /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
 		1E63B0F727907543004B8416 /* CardHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardHeader.swift; sourceTree = "<group>"; };
 		1E63B0F92790755F004B8416 /* CardDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardDetails.swift; sourceTree = "<group>"; };
-		1E961C8E2798206E00B5747A /* MainViewWithStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewWithStack.swift; sourceTree = "<group>"; };
+		1E961C8E2798206E00B5747A /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -164,9 +162,8 @@
 		1E63B0E7278856C5004B8416 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				1E63B0E4278852DF004B8416 /* MainView.swift */,
 				1E3D1D332791BA7700960DB7 /* InfoView.swift */,
-				1E961C8E2798206E00B5747A /* MainViewWithStack.swift */,
+				1E961C8E2798206E00B5747A /* MainView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -338,12 +335,11 @@
 				1E63B0F627907535004B8416 /* CardView.swift in Sources */,
 				1E3D1D342791BA7700960DB7 /* InfoView.swift in Sources */,
 				1E63B0EF27889169004B8416 /* UIView+Constraints.swift in Sources */,
-				1E63B0E5278852DF004B8416 /* MainView.swift in Sources */,
 				1E3D1D362791CA0500960DB7 /* CardLayoutDelegate.swift in Sources */,
 				1E63B0B527884C48004B8416 /* AppDelegate.swift in Sources */,
 				1E63B0F827907543004B8416 /* CardHeader.swift in Sources */,
 				1E63B0B727884C48004B8416 /* SceneDelegate.swift in Sources */,
-				1E961C8F2798206E00B5747A /* MainViewWithStack.swift in Sources */,
+				1E961C8F2798206E00B5747A /* MainView.swift in Sources */,
 				1E63B0F327905A09004B8416 /* Const.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
