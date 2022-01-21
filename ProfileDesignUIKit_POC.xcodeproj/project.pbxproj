@@ -24,7 +24,6 @@
 		1E63B0F327905A09004B8416 /* Const.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E63B0F227905A09004B8416 /* Const.swift */; };
 		1E63B0F627907535004B8416 /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E63B0F527907535004B8416 /* CardView.swift */; };
 		1E63B0F827907543004B8416 /* CardHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E63B0F727907543004B8416 /* CardHeader.swift */; };
-		1E63B0FA2790755F004B8416 /* CardDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E63B0F92790755F004B8416 /* CardDetails.swift */; };
 		1E961C8F2798206E00B5747A /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E961C8E2798206E00B5747A /* MainView.swift */; };
 /* End PBXBuildFile section */
 
@@ -67,7 +66,6 @@
 		1E63B0F227905A09004B8416 /* Const.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Const.swift; sourceTree = "<group>"; };
 		1E63B0F527907535004B8416 /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
 		1E63B0F727907543004B8416 /* CardHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardHeader.swift; sourceTree = "<group>"; };
-		1E63B0F92790755F004B8416 /* CardDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardDetails.swift; sourceTree = "<group>"; };
 		1E961C8E2798206E00B5747A /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -192,7 +190,6 @@
 			children = (
 				1E63B0F527907535004B8416 /* CardView.swift */,
 				1E63B0F727907543004B8416 /* CardHeader.swift */,
-				1E63B0F92790755F004B8416 /* CardDetails.swift */,
 			);
 			path = Card;
 			sourceTree = "<group>";
@@ -331,7 +328,6 @@
 				1E63B0B927884C48004B8416 /* MainViewController.swift in Sources */,
 				1E63B0F127889616004B8416 /* UsesAutoLayout.swift in Sources */,
 				1E63B0EA27887EC8004B8416 /* Modifiable.swift in Sources */,
-				1E63B0FA2790755F004B8416 /* CardDetails.swift in Sources */,
 				1E63B0F627907535004B8416 /* CardView.swift in Sources */,
 				1E3D1D342791BA7700960DB7 /* InfoView.swift in Sources */,
 				1E63B0EF27889169004B8416 /* UIView+Constraints.swift in Sources */,

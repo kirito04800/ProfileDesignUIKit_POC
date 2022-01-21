@@ -37,19 +37,17 @@ class CardHeader: UIView {
 
     init(title: String, icon: UIImage) {
         super.init(frame: .zero)
-        backgroundColor = .red
         self.title = title
         self.icon = icon
+        layer.borderWidth = 2
+        layer.borderColor = UIColor.black.withAlphaComponent(0.4).cgColor
+        layer.cornerRadius = 10
 
         addSubview(stackView)
 
         stackView.addArrangedSubview(iconImageView)
         stackView.addArrangedSubview(titleLabel)
         stackView.addArrangedSubview(showDetailsButton)
-
-//        addSubview(iconImageView)
-//        addSubview(titleLabel)
-//        addSubview(showDetailsButton)
 
         setupStackView()
         setupIconImageView()
@@ -68,8 +66,6 @@ class CardHeader: UIView {
 
     private func setupIconImageView() {
         let constraints = [
-//            iconImageView.centerYAnchor.constraint(equalTo: centerYAnchor),
-//            iconImageView.leftAnchor.constraint(equalTo: leftAnchor, constant: 8),
             iconImageView.heightAnchor.constraint(equalTo: iconImageView.widthAnchor),
             iconImageView.widthAnchor.constraint(equalToConstant: 26)
         ]

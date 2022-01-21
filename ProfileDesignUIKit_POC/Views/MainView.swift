@@ -142,16 +142,6 @@ class MainView: UIView, CardLayoutDelegate {
 
     private func setupImageContainerView() {
         imageContainerView.backgroundColor = .blue
-        imageContainerView.layer.shadowOpacity = 0.7
-        imageContainerView.layer.masksToBounds = false
-        imageContainerView.layer.shadowRadius = 4
-        imageContainerView.layer.shadowOpacity = 1
-        imageContainerView.layer.shadowColor = UIColor.black.cgColor
-        imageContainerView.layer.shadowOffset = CGSize(width: 0 , height: 2)
-        imageContainerView.layer.shadowPath = UIBezierPath(rect: CGRect(x: 0,
-                                                                        y: imageContainerView.bounds.maxY - imageContainerView.layer.shadowRadius,
-                                                                        width: imageContainerView.bounds.width,
-                                                                        height: imageContainerView.layer.shadowRadius)).cgPath
         imageContainerView.layer.zPosition = 2
         let guide = safeAreaLayoutGuide
         let constraints = [

@@ -13,6 +13,6 @@ protocol CardLayoutDelegate where Self: UIView {
 
 extension CardLayoutDelegate {
     func layout() {
-        self.layoutIfNeeded()
+        layoutIfNeeded()
     }
 }

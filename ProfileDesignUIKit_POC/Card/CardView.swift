@@ -15,6 +15,7 @@ class CardView: UIView {
     @UsesAutoLayout
     var detailsViewContainer = UIView().applyModifiers {
         $0.directionalLayoutMargins = NSDirectionalEdgeInsets(top: 16, leading: 16, bottom: 16, trailing: 16)
+        $0.clipsToBounds = true
     }
 
     var detailsView: UIView?
@@ -24,13 +25,16 @@ class CardView: UIView {
 
     init(title: String, icon: UIImage, details: UIView,layoutDelegate: CardLayoutDelegate) {
         super.init(frame: .zero)
-        backgroundColor = .lightGray
+        backgroundColor = .white
+        layer.borderColor = UIColor.black.withAlphaComponent(0.4).cgColor
+        layer.borderWidth = 1
         layer.cornerRadius = 10
         clipsToBounds = true
         self.layoutDelegate = layoutDelegate
 
         detailsView = details
         detailsView?.translatesAutoresizingMaskIntoConstraints = false
+        detailsView?.clipsToBounds = true
 
         viewHeightConstraint = heightAnchor.constraint(equalToConstant: 40)
 
